@@ -1,11 +1,6 @@
 {
- "lastRun": "2026-10-22T23:01:36.050Z",
+ "lastRun": "2026-10-22T23:07:47.857Z",
  "sources": {
-  "tiktok": {
-   "ok": true,
-   "count": 25,
-   "warnings": []
-  },
   "youtube": {
    "ok": true,
    "count": 20
