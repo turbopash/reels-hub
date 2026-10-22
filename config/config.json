@@ -20,7 +20,7 @@
   ],
   "sources": {
     "tiktok": {
-      "enabled": true,
+      "enabled": false,
       "perRun": 30,
       "keywords": []
     },
