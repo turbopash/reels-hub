@@ -1,20 +1,23 @@
 {
- "lastRun": "2026-10-22T22:46:56.627Z",
+ "lastRun": "2026-10-22T22:48:02.905Z",
  "sources": {
   "tiktok": {
    "ok": true,
-   "count": 16,
-   "warnings": [
-    "tikwm HTTP 531"
-   ]
+   "count": 23,
+   "warnings": []
+  },
+  "youtube": {
+   "ok": false,
+   "count": 0,
+   "error": "не задан ключ YT_API_KEY в секретах репозитория"
   },
   "tiktokMusic": {
    "ok": true,
-   "count": 16
+   "count": 37
   }
  },
  "total": {
-  "videos": 16,
-  "music": 16
+  "videos": 37,
+  "music": 37
  }
 }
