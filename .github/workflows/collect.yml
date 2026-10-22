@@ -1,0 +1,46 @@
+name: Сбор роликов
+
+on:
+  schedule:
+    # Запуск каждый час; сам сборщик решает, пора ли собирать (интервал задаётся в админке).
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Собрать сейчас, не дожидаясь интервала'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Собрать ролики
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force }}
+        run: node scripts/collect.mjs
+      - name: Сохранить результат
+        run: |
+          git config user.name "reels-hub-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+          else
+            git commit -m "Обновление роликов $(date -u +'%Y-%m-%d %H:%M')"
+            git pull --rebase
+            git push
+          fi

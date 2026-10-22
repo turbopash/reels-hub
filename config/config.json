@@ -1,0 +1,20 @@
+{
+  "siteTitle": "Reels Hub",
+  "accent": "#2563EB",
+  "passwordHash": "",
+  "downloadProxy": "",
+  "region": "RU",
+  "intervalHours": 6,
+  "retentionDays": 30,
+  "sections": [
+    { "id": "videos", "title": "Видео", "visible": true },
+    { "id": "music", "title": "Музыка", "visible": true }
+  ],
+  "sources": {
+    "tiktok": { "enabled": true, "perRun": 30, "keywords": [] },
+    "youtube": { "enabled": false, "perRun": 20, "keywords": [] },
+    "tiktokMusic": { "enabled": true }
+  },
+  "pinned": [],
+  "hidden": []
+}
