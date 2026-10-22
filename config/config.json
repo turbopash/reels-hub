@@ -4,8 +4,8 @@
   "passwordHash": "6bafaef5b384da0a6e411931954ab7e4296888987c67e605f300be08e99cbfe5",
   "downloadProxy": "",
   "region": "RU",
-  "intervalHours": 6,
-  "retentionDays": 30,
+  "intervalHours": 1,
+  "retentionDays": 7,
   "sections": [
     {
       "id": "videos",
@@ -21,13 +21,19 @@
   "sources": {
     "tiktok": {
       "enabled": false,
-      "perRun": 30,
-      "keywords": []
+      "perRun": 50,
+      "keywords": [
+        "танцы",
+        "спортивные бальные танцы"
+      ]
     },
     "youtube": {
       "enabled": true,
-      "perRun": 20,
-      "keywords": []
+      "perRun": 50,
+      "keywords": [
+        "танцы",
+        "спортивные бальные танцы"
+      ]
     },
     "tiktokMusic": {
       "enabled": true
