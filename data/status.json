@@ -1,9 +1,9 @@
 {
- "lastRun": "2026-11-07T14:50:17.908Z",
+ "lastRun": "2026-11-07T15:46:43.293Z",
  "sources": {
   "youtube": {
    "ok": true,
-   "count": 64
+   "count": 63
   },
   "tiktokMusic": {
    "ok": true,
@@ -11,7 +11,7 @@
   }
  },
  "total": {
-  "videos": 358,
+  "videos": 356,
   "music": 0
  }
 }
